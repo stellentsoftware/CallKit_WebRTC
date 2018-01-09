@@ -1,0 +1,6 @@
+framework module Pods_CallKitWithWebRTC {
+  umbrella header "Pods-CallKitWithWebRTC-umbrella.h"
+
+  export *
+  module * { export * }
+}

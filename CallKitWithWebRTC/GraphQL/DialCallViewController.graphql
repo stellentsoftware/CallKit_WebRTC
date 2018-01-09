@@ -1,0 +1,15 @@
+fragment NotificationDetails on notificationType {
+    _id
+    roomName
+    receiver
+    caller
+    message
+    error
+    deviceToken
+}
+
+mutation InitiateCall($caller: String $receiver: String $handleName: String $UUID: String){
+    initiateCall(caller: $caller receiver: $receiver handleName: $handleName UUID: $UUID){
+        ...NotificationDetails
+    }
+}

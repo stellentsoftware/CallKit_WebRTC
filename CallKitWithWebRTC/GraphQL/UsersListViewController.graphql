@@ -1,0 +1,30 @@
+# Creating Fragment for userType
+fragment UserDetails on userType {
+    _id
+    name
+    email
+    loginType
+    rank
+    relegiousObservance
+    isSaved
+    yearsOfExperience
+    state
+    bio
+    loginStatus
+    deviceToken
+    message
+    error
+}
+# Creating query to get users list
+query ListUsers($limit: Int) {
+    listUsers(limit: $limit) {
+        ...UserDetails
+    }
+}
+
+mutation LogOut($_id: ID)
+{
+    logOut(_id: $_id){
+        ...UserDetails
+    }
+}
